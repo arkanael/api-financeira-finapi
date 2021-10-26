@@ -54,6 +54,7 @@ Campo statement - []
 - GET: /version - Informa a versão do servidor.
 - GET: /statement/:cpf - Busca os statement da conta com o cpf.
 - POST: /account - Cadastrar uma nova conta:
+- POST: /deposit - Fazer um novo deposito em uma conta:
 - PUT: /
 - PATCH: /
 - DELETE: /
