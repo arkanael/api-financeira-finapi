@@ -59,6 +59,12 @@ app.get("/statement/date", verifyIfExistAccountCPF, (request, response) => {
   return response.json(statement);
 });
 
+app.get("/account", verifyIfExistAccountCPF, (request, response) => {
+  const { customer } = request;
+
+  return response.json(customer);
+});
+
 app.post("/account", (request, response) => {
   const { cpf, name } = request.body;
 
