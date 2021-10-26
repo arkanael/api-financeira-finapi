@@ -1,42 +1,48 @@
 # finapi
 
 Botcamp Ignite (nodejs) - Rocketseat
+Tecnologias utilizadas no projeto
+
+express
+nodemon para reinicar o projeto de forma mais simples
+uuid indentificador unico universal
 
 # Requisitos
 
 - [x] Deve ser possível criar uma conta
 - [x] Deve ser possível buscar o extrato bancário do cliente
-- [x] Deve ser possível realizar um depósito
-- [x] Deve ser possível realizar um saque
-- [x] Deve ser possível buscar o extrato bancário do cliente por data
-- [x] Deve ser possível atualizar dados da conta do cliente
-- [x] Deve ser possível obter dados da conta do cliente
-- [x] Deve ser possível deletar uma conta
+- [ ] Deve ser possível realizar um depósito
+- [ ] Deve ser possível realizar um saque
+- [ ] Deve ser possível buscar o extrato bancário do cliente por data
+- [ ] Deve ser possível atualizar dados da conta do cliente
+- [ ] Deve ser possível obter dados da conta do cliente
+- [ ] Deve ser possível deletar uma conta
 
 # Regras de negócio
 
 - [x] Não deve ser possível cadastrar uma conta com CPF já existente
 - [x] Não deve ser possível fazer depósito em uma conta não existente
-- [x] Não deve ser possível buscar extrato em uma conta não existente
-- [x] Não deve ser possível fazer saque em uma conta não existente
-- [x] Não deve ser possível excluir uma conta não existente
-- [x] Não deve ser possível fazer saque quando o saldo for insuficiente
+- [ ] Não deve ser possível buscar extrato em uma conta não existente
+- [ ] Não deve ser possível fazer saque em uma conta não existente
+- [ ] Não deve ser possível excluir uma conta não existente
+- [ ] Não deve ser possível fazer saque quando o saldo for insuficiente
 
-cpf - string
-name - string
-id - uuid
-statement []
+Dados da Conta:
+Campo cpf - string
+Campo name - string
+Campo id - uuid
+Campo statement - []
 
-Comandos utilizados no desenvolvimento da aplicação:
+Rotas utiizadas:
+GET: /statement/:cpf - Busca os statement da conta com o cpf.
+POST: /account - Cadastrar uma nova conta:
+PUT: /courses
+PATCH: /courses
+DELETE: /courses
 
-- yarn add express
-- yarn add nodemon -D
-
-Tecnologias utilizadas no projeto
-
-express
-nodemon para restartar o projeto
-uuid indentificador unico universal
+Status Code:
+status(201) => Criado com sucesso.
+status(404) => Conta não encontrada
 
 GET => Buscar uma informação dentro do nosso servidor
 POST => Inserir uma informação no servidor
@@ -44,18 +50,8 @@ PUT => Alterar uma informação no servidor
 PATCH => Alterar uma informação espefica no servidor
 DELETE => Deleta uma informação no servidor
 
-Tipos de Parametros:
+Comandos utilizados no desenvolvimento da aplicação:
 
-Route Params => Identificar um recurso, editar/deletar/buscar /:id
-Query Params => Paginação / Filtro
-Body Params => Os objetos inserção e alteração
-
-Rotas utiizadas:
-GET: /courses
-POST: /account: Cadastrar uma nova conta:
-PUT: /courses
-PATCH: /courses
-DELETE: /courses
-
-Status Code:
-status(201) => Criado com sucesso.
+- yarn add express
+- yarn add nodemon -D
+- yarn add

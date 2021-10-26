@@ -11,8 +11,20 @@ app.get("/", (req, res) => {
   return res.json({ message: "Running" });
 });
 
-app.get("/version", (req, res) => {
-  return res.json({ Version: "1.0" });
+app.get("/version", (request, response) => {
+  return response.json({ Version: "1.0" });
+});
+
+app.get("/statement", (request, response) => {
+  const { cpf } = request.headers;
+
+  const customer = customers.find((customer) => customer.cpf === cpf);
+
+  if (!customer) {
+    return response.status(404).json({ error: "Customer not found!" });
+  }
+
+  return response.json(customer.statement);
 });
 
 app.post("/account", (request, response) => {
