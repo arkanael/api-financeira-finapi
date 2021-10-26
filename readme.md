@@ -32,7 +32,7 @@ Esse é o Primeiro projeto do bootcamp do Ignite da Rocketseat, desenvolvida nas
 - [x] Deve ser possível atualizar dados da conta do cliente
 - [x] Deve ser possível obter dados da conta do cliente
 - [x] Deve ser possível deletar uma conta
-- [] Deve ser possível retornar o balance da conta
+- [x] Deve ser possível retornar o balance da conta
 
 ### 🔴 Regras de negócio
 
@@ -55,14 +55,14 @@ Campo statement - []
 | tipo | rota | descrição
 
 - GET: /version - Informa a versão do servidor.
-- GET: /statement/:cpf - Busca os statement da conta com o cpf.
+- GET: /statement/ - Busca os statement da conta com o cpf.
 - GET: /statement/date - Busca os statement por data.
+- GET: /balance/ - Busca os balance da conta.
 - POST: /account - Cadastrar uma nova conta:
 - POST: /deposit - Fazer um novo deposito na conta:
 - POST: /withdraw - Fazer um novo saque na conta:
-- PUT: /
-- PATCH: /
-- DELETE: /
+- PUT: /account - Atualiza o nome da conta
+- DELETE: /account - Deleta a conta
 
 ### 🆎 Status Code:
 
