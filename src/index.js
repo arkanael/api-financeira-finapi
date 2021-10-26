@@ -132,4 +132,12 @@ app.put("/account", verifyIfExistAccountCPF, (request, response) => {
   response.status(201).send();
 });
 
+app.delete("/account", verifyIfExistAccountCPF, (request, response) => {
+  const { customer } = request;
+
+  customers.splice(customer, 1);
+
+  return response.status(200).send().json(customers);
+});
+
 app.listen(3333, console.log("Server is runnning"));
