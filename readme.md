@@ -26,7 +26,7 @@ Esse é o Primeiro projeto do bootcamp do Ignite da Rocketseat, desenvolvida nas
 
 - [x] Deve ser possível criar uma conta
 - [x] Deve ser possível buscar o extrato bancário do cliente
-- [ ] Deve ser possível realizar um depósito
+- [x] Deve ser possível realizar um depósito
 - [ ] Deve ser possível realizar um saque
 - [ ] Deve ser possível buscar o extrato bancário do cliente por data
 - [ ] Deve ser possível atualizar dados da conta do cliente
@@ -37,7 +37,7 @@ Esse é o Primeiro projeto do bootcamp do Ignite da Rocketseat, desenvolvida nas
 
 - [x] Não deve ser possível cadastrar uma conta com CPF já existente
 - [x] Não deve ser possível fazer depósito em uma conta não existente
-- [ ] Não deve ser possível buscar extrato em uma conta não existente
+- [x] Não deve ser possível buscar extrato em uma conta não existente
 - [ ] Não deve ser possível fazer saque em uma conta não existente
 - [ ] Não deve ser possível excluir uma conta não existente
 - [ ] Não deve ser possível fazer saque quando o saldo for insuficiente
@@ -51,10 +51,13 @@ Campo statement - []
 
 ### 🌉 Rotas utiizadas:
 
+| tipo | rota | descrição
+
 - GET: /version - Informa a versão do servidor.
 - GET: /statement/:cpf - Busca os statement da conta com o cpf.
 - POST: /account - Cadastrar uma nova conta:
-- POST: /deposit - Fazer um novo deposito em uma conta:
+- POST: /deposit - Fazer um novo deposito na conta:
+- POST: /withdraw - Fazer um novo saque na conta:
 - PUT: /
 - PATCH: /
 - DELETE: /
