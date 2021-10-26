@@ -117,4 +117,13 @@ app.post("/withdraw", verifyIfExistAccountCPF, (request, response) => {
   return response.status(201).send();
 });
 
+app.put("/account", verifyIfExistAccountCPF, (request, response) => {
+  const { name } = request.body;
+  const { customer } = request;
+
+  customer.name = name;
+
+  response.status(201).send();
+});
+
 app.listen(3333, console.log("Server is runnning"));
